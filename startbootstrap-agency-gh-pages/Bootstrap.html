@@ -51,7 +51,10 @@
         <div class="container mt-4" id="about">
             <div class="row align-items-center">
                 <div class="col-md-3 text-center">
-                    <img src="FinancePic.png" alt="Jared Ballard" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                    <button id="forbidden-button" style="border: none; background: none; padding: 0;">
+                        <img src="FinancePic.png" alt="Jared Ballard" class="img-fluid rounded" style="max-width: 100%; height: auto;">
+                    </button>
+                    <p class="text-muted mt-2">This is forbidden to click. Seriously.</p>
                 </div>
                 <div class="col-md-9">
                     <h2 class="section-heading text-uppercase">About Me</h2>
@@ -128,7 +131,18 @@
             </div>
         </footer>
 
+        <!-- Audio Element -->
+        <audio id="forbidden-audio" src="ForbiddenSound.mp3"></audio>
+
         <!-- Bootstrap core JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom Script -->
+        <script>
+            document.getElementById("forbidden-button").addEventListener("click", function () {
+                const audio = document.getElementById("forbidden-audio");
+                audio.play();
+            });
+        </script>
     </body>
 </html>
