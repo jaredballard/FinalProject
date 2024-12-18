@@ -23,6 +23,22 @@
             <canvas id="arrow" width="500" height="500"></canvas>
         </div>
     </div>
+
+    <!-- Audio Button -->
+    <div style="text-align: center; margin-top: 20px;">
+        <button id="play-song" style="padding: 10px 20px; font-size: 16px; background-color: black; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Click to Lock In
+        </button>
+        <audio id="song" src="timetoplay.mp3"></audio>
+    </div>
+
+    <script>
+        document.getElementById("play-song").addEventListener("click", function () {
+            const audio = document.getElementById("song");
+            audio.play();
+        });
+    </script>
+
     <script src="game.js"></script>
 </body>
 </html>
