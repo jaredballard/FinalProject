@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Golf Game</title>
     <link rel="stylesheet" href="game-style.css">
+    <style>
+        .navigation-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .navigation-button:hover {
+            background-color: gray;
+        }
+    </style>
 </head>
 <body>
     <div id="game-container">
@@ -30,6 +47,12 @@
             Click to Lock In
         </button>
         <audio id="song" src="timetoplay.mp3"></audio>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="Bootstrap.html" class="navigation-button">Back to Home Page</a>
+        <a href="index.html" class="navigation-button">Back to Scratch Page</a>
     </div>
 
     <script>
