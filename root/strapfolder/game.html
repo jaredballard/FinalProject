@@ -48,6 +48,21 @@
         </button>
         <audio id="song" src="timetoplay.mp3"></audio>
     </div>
+    
+    <script>
+        // Reference the audio element
+        const audioElement = document.getElementById("song");
+    
+        // Set the volume to 50% (adjust as needed, e.g., 0.1 for 10%)
+        audioElement.volume = 0.5;
+    
+        // Add event listener to play the audio
+        document.getElementById("play-song").addEventListener("click", () => {
+            audioElement.currentTime = 0; // Optional: restart audio from the beginning
+            audioElement.play();
+        });
+    </script>
+    
 
     <!-- Navigation Buttons -->
     <div style="text-align: center; margin-top: 20px;">

@@ -8,6 +8,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> <!-- Custom stylesheet -->
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, main, footer {
+            max-width: 900px; /* Wider content */
+            width: 100%;
+            text-align: center;
+        }
+
         .custom-link {
             display: inline-block;
             margin: 10px;
@@ -23,6 +37,7 @@
         .custom-link:hover {
             background-color: gray;
         }
+
         .scroll-button {
             position: fixed;
             padding: 10px 15px;
@@ -36,13 +51,20 @@
         .scroll-button:hover {
             background-color: gray;
         }
+
         #scroll-to-top {
             left: 20px;
             bottom: 20px;
         }
+
         #scroll-to-bottom {
             left: 20px;
             top: 20px;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -53,7 +75,7 @@
     </header>
 
     <!-- Navigation Links -->
-    <div style="text-align: center; margin: 20px;">
+    <div>
         <a href="index.html" class="custom-link">Back to Home Page</a>
         <a href="game.html" class="custom-link">It's Time to Play the Game</a>
     </div>
