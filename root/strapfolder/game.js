@@ -12,6 +12,9 @@ let strokes = 0;
 let velocity = { x: 0, y: 0 };
 let isGameResetting = false; // Prevent additional movements during reset
 
+// Prevent text selection while dragging
+document.addEventListener("mousedown", (e) => e.preventDefault());
+
 // Update Ball Position
 function updateBallPosition() {
     ball.style.top = ballPosition.top + "px";
@@ -83,19 +86,33 @@ function moveBall() {
     }
 }
 
-// Check Win Condition
+// Check Win Condition (1/3 of the Ball Inside the Hole)
 function checkWin() {
     const ballRect = ball.getBoundingClientRect();
     const holeRect = hole.getBoundingClientRect();
 
-    if (
-        ballRect.top >= holeRect.top &&
-        ballRect.bottom <= holeRect.bottom &&
-        ballRect.left >= holeRect.left &&
-        ballRect.right <= holeRect.right
-    ) {
+    // Calculate horizontal and vertical overlaps
+    const horizontalOverlap = Math.max(
+        0,
+        Math.min(ballRect.right, holeRect.right) - Math.max(ballRect.left, holeRect.left)
+    );
+    const verticalOverlap = Math.max(
+        0,
+        Math.min(ballRect.bottom, holeRect.bottom) - Math.max(ballRect.top, holeRect.top)
+    );
+
+    // Ball width and height
+    const ballWidth = ballRect.width;
+    const ballHeight = ballRect.height;
+
+    // Check if overlap covers at least 1/3 of the ball
+    const isHorizontalIn = horizontalOverlap >= ballWidth / 3;
+    const isVerticalIn = verticalOverlap >= ballHeight / 3;
+
+    if (isHorizontalIn && isVerticalIn) {
+        ball.style.visibility = "hidden"; // Hide the ball when the win message pops up
         alert(`Congratulations! You made it in ${strokes} strokes.`);
-        resetGame(); // Ensure the game resets
+        resetGame();
     }
 }
 
@@ -114,8 +131,9 @@ function resetGame() {
     updateBallPosition();
     ctx.clearRect(0, 0, arrowCanvas.width, arrowCanvas.height);
 
-    // Allow game to resume after reset
+    // Show the ball again after reset
     setTimeout(() => {
+        ball.style.visibility = "visible";
         isGameResetting = false;
     }, 500);
 }
