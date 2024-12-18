@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Golf Game</title>
+    <link rel="stylesheet" href="game-style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Mini Golf Game</h1>
+        <p>Click and drag the ball to aim. Release to shoot! Avoid obstacles and get the ball into the hole.</p>
+        <p id="strokes">Strokes: 0</p>
+        <!-- Game Board -->
+        <div id="game-board">
+            <div id="hole"></div>
+            <div id="ball"></div>
+            <!-- Obstacles -->
+            <div class="obstacle" style="top: 150px; left: 100px;"></div>
+            <div class="obstacle" style="top: 300px; left: 200px;"></div>
+            <div class="obstacle" style="top: 200px; left: 350px;"></div>
+            <!-- Arrow Canvas -->
+            <canvas id="arrow" width="500" height="500"></canvas>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

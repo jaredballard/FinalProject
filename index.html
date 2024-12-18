@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Golf</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Custom stylesheet -->
+</head>
+<body>
+    <!-- Rotating Polka Dot Background -->
+    <div class="background-polka">
+        <!-- Increased Repetition for Full Coverage -->
+        <!-- This will generate a massive grid of "Let's Go Golfing!" -->
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <div class="polka-text">Let's Go Golfing!</div>
+        <!-- Repeat 10x -->
+        <script>
+            for (let i = 0; i < 200; i++) {
+                document.write('<div class="polka-text">Let\'s Go Golfing!</div>');
+            }
+        </script>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Golf: The Gentleman’s Game ⛳</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Fun Facts Section -->
+        <section id="fun-facts">
+            <h2>Did You Know?</h2>
+            <div class="content-box">
+                <p>Here are some fascinating facts about golf:</p>
+                <ol>
+                    <li>Golf is one of the <strong>oldest sports</strong> in history, dating back to 15th century Scotland.</li>
+                    <li>
+                        Golf balls were originally made of feathers!  
+                        <ul>
+                            <li>The "feathery" was handcrafted and stuffed with goose feathers.</li>
+                            <li>They were expensive and not very durable.</li>
+                        </ul>
+                    </li>
+                    <li>There are over <strong>34,000 golf courses</strong> worldwide!</li>
+                </ol>
+            </div>
+            <img src="golfpic.jpeg" alt="Golf course" class="golf-image">
+        </section>
+
+        <!-- YouTube Video Section -->
+        <section id="video">
+            <h2>Listen to this inspiring message from a golf legend!</h2>
+            <p>DJ Khaled wants you to know it's time to hit the greens. Let's go golfing!</p>
+            <iframe 
+                width="720" 
+                height="405" 
+                src="https://www.youtube.com/embed/OiouG6EIY30?si=MSLjQ4Q40P9u2JXK" 
+                title="DJ Khaled - Let's Go Golfing" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- Tableau Visualization Section -->
+        <section id="visualization">
+            <h2>Most Popular Golf Destinations in America</h2>
+            <p>Ever wonder where the most popular golf courses in the United States are located?  
+                Explore this interactive Tableau visualization to discover America's top golfing destinations.</p>
+            <div class='tableauPlaceholder' id='viz1734459750574' style='position: relative'>
+                <noscript>
+                    <a href='#'>
+                        <img alt='Sheet 1' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z7&#47;Z7FBJWCW4&#47;1_rss.png' style='border: none' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> 
+                    <param name='path' value='shared&#47;Z7FBJWCW4' /> 
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Z7&#47;Z7FBJWCW4&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-US' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1734459750574');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = '400px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </section>
+    </main>
+
+    <!-- Fixed TikTok Embed -->
+    <aside class="fixed-tiktok">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@suhrefx/video/7405580432445541663" 
+            data-video-id="7405580432445541663" 
+            style="max-width: 605px; min-width: 325px;">
+            <section> 
+                <a target="_blank" title="@suhrefx" href="https://www.tiktok.com/@suhrefx?refer=embed">@suhrefx</a> 
+                Bro was wasted😭😭 
+                <a title="golf" target="_blank" href="https://www.tiktok.com/tag/golf?refer=embed">#golf</a>
+            </section> 
+        </blockquote> 
+        <script async src="https://www.tiktok.com/embed.js"></script>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <p>⛳ Created with love for the game of golf</p>
+    </footer>
+</body>
+</html>
