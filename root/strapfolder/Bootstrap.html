@@ -18,17 +18,28 @@
         <style>
             /* White banner background */
             #mainNav {
-                background-color: white; /* White banner */
-                border-bottom: 1px solid #ddd; /* Light gray bottom border for separation */
+                background-color: white;
+                border-bottom: 1px solid #ddd;
             }
 
             #mainNav .navbar-brand,
             #mainNav .nav-link {
-                color: black !important; /* Ensures text is readable */
+                color: black !important;
             }
 
             #mainNav .nav-link:hover {
-                color: gray !important; /* Hover effect for links */
+                color: gray !important;
+            }
+
+            /* Black bar for Resume header */
+            .resume-header {
+                background-color: black;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin-bottom: 30px;
+                font-size: 2rem;
+                font-weight: bold;
             }
         </style>
     </head>
@@ -36,7 +47,6 @@
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <!-- Updated Text -->
                 <a class="navbar-brand" href="#page-top">Welcome to my page!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -85,9 +95,8 @@
         <!-- Resume Section -->
         <section id="resume" class="page-section">
             <div class="container">
-                <div class="text-center mb-5">
-                    <h2 class="section-heading text-uppercase">Resume</h2>
-                </div>
+                <!-- Black Bar with Resume Text -->
+                <div class="resume-header">Resume</div>
 
                 <!-- Education -->
                 <h3 class="fw-bold">Education</h3>
@@ -107,12 +116,30 @@
                     <li>Built Excel analysis tools to compare remote sales profitability against in-person teams.</li>
                     <li>Recommended pay structure adjustments to improve team profitability by 15%.</li>
                 </ul>
+                <p><strong>Grandview Peak Capital</strong> | Financial Analyst Intern | <em>Jan 2024 - Apr 2024</em></p>
+                <ul>
+                    <li>Conducted financial analysis and due diligence for 500+ acquisition targets.</li>
+                    <li>Prepared detailed reports and presentations for executives recommending investment opportunities.</li>
+                </ul>
 
                 <!-- Leadership and Service -->
                 <h3 class="fw-bold mt-4">Leadership and Service</h3>
                 <p><strong>Doernbecher Children’s Hospital Committee</strong> | Portland, OR | <em>Sep 2015 - Jun 2019</em></p>
                 <ul>
                     <li>Led annual fundraising events across 30+ high schools, raising over $1,000,000 annually.</li>
+                </ul>
+                <p><strong>Church of Jesus Christ of Latter-Day Saints</strong> | Volunteer Representative | <em>Aug 2020 - Aug 2022</em></p>
+                <ul>
+                    <li>Supervised 40+ volunteers, led weekly training sessions, and facilitated team collaboration.</li>
+                </ul>
+
+                <!-- Skills, Awards, and Interests -->
+                <h3 class="fw-bold mt-4">Skills, Awards, and Interests</h3>
+                <ul>
+                    <li><strong>Languages:</strong> Fluent in Spanish (reading, writing, speaking)</li>
+                    <li><strong>Technical Skills:</strong> Excel (advanced), Financial Modeling, Data Analysis</li>
+                    <li><strong>Awards:</strong> Recognition award from BYU Math Department (Top 2% in Calculus 1)</li>
+                    <li><strong>Interests:</strong> Golf (career low 73, current 10 handicap), weightlifting, pickleball, and longboarding</li>
                 </ul>
             </div>
         </section>
